@@ -61,17 +61,36 @@ void Input_Data(){
 }
 
 int Input_Score(){
-    int size = 0;
-    char sub[256];
-    printf("科目数を入力\n");
-    scanf("%d",&size);
-    for(int i = 0;i < size;i++){
-        printf("科目を入力\n");
-        scanf("%s",sub);
-        printf("%sの点数を入力\n",sub);
-        scanf("%f",&Score[i]);
-        fprintf(file,"%s,%f\n",sub,Score[i]);
-    }
+    int size = 9;//科目数
+
+    printf("国語の点数を入力\n");
+    scanf("%f",&Score[0]);
+    fprintf(file,"Japanese,%f\n",Score[0]);
+    printf("数学Aの点数を入力\n");
+    scanf("%f",&Score[1]);
+    fprintf(file,"MathA,%f\n",Score[1]);
+    printf("数学Bの点数を入力\n");
+    scanf("%f",&Score[2]);
+    fprintf(file,"MathB,%f\n",Score[2]);
+    printf("歴史の点数を入力\n");
+    scanf("%f",&Score[3]);
+    fprintf(file,"History,%f\n",Score[3]);
+    printf("物理の点数を入力\n");
+    scanf("%f",&Score[4]);
+    fprintf(file,"Physics,%f\n",Score[4]);
+    printf("英語Rの点数を入力\n");
+    scanf("%f",&Score[5]);
+    fprintf(file,"EngR,%f\n",Score[5]);
+    printf("英語Wの点数を入力\n");
+    scanf("%f",&Score[6]);
+    fprintf(file,"EngW,%f\n",Score[6]);
+    printf("倫理の点数を入力\n");
+    scanf("%f",&Score[7]);
+    fprintf(file,"Ethics,%f\n",Score[7]);
+    printf("化学の点数を入力\n");
+    scanf("%f",&Score[8]);
+    fprintf(file,"Chemistry,%f\n",Score[8]);
+  
     return size;
 }
 
@@ -119,3 +138,8 @@ void Rank_Maker(int clsmate){
     }
 
 }
+
+
+
+
+
